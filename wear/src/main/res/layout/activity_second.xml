@@ -20,25 +20,39 @@
         android:singleLine="false"
         android:layout_alignParentEnd="true"
         android:layout_alignParentStart="true"
-        android:layout_above="@+id/btn_T"/>
+        android:layout_above="@+id/linearLayout"/>
 
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/btn_false"
-        android:id="@+id/btn_f"
-        android:textSize="22sp"
-        android:layout_below="@+id/question"
-        android:layout_alignParentEnd="true"/>
-
-    <Button
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_true"
-        android:id="@+id/btn_T"
-        android:textSize="22sp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true"/>
+        android:layout_alignParentStart="true"
+        android:id="@+id/linearLayout">
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_true"
+            android:id="@+id/btn_T"
+            android:textSize="22sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="1"/>
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_false"
+            android:id="@+id/btn_f"
+            android:textSize="22sp"
+            android:layout_below="@+id/question"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/btn_T"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
 </RelativeLayout>
